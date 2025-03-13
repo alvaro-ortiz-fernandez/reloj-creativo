@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/sketch.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <title>Reto 1. Reloj creativo</title>
+</head>
+<body class="pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="card mb-3" style="width: 702px">
+                    <div id="canvas-p5"></div>
+                    <div class="card-body pt-2">
+                        <h4 class="card-title">Reloj creativo</h4>
+                        <div class="card-text">
+                            <p>El gráfico muestra una imagen que se corresponde con la hora del día,
+                                y un puzle de 60x60 (minutos x segundos) que tapa la imagen y del que cada segundo va
+                                destapando una pieza.
+                            </p>
+                            <p>El reloj se basa en la hora actual. Puede usar los siguientes controles
+                                para establecer manualmente la hora que desee, pulse sobre "Detener"
+                                para establecer la hora y vuelva a pulsar sobre "Reanudar" para activarlo
+                                en la hora actual:
+                            </p>
+                            <div class="d-flex justify-content-center mb-3">
+                                <button type="button" class="btn btn-primary" onclick="detener()" id="detener">
+                                    <i class="bi bi-pause-fill"></i>
+                                    <span>Detener</span>
+                                </button>
+                                <button type="button" class="btn btn-success d-none" onclick="reanudar()" id="reanudar">
+                                    <i class="bi bi-play-fill"></i>
+                                    <span>Reanudar</span>
+                                </button>
+                            </div>
+                            <div class="row temporizador">
+                                <div class="col-md-6 offset-md-3">
+                                    <div class="d-flex flex-row">
+                                        <div class="p-2">
+                                            <input type="text" id="hora" class="form-control" disabled="disabled">
+                                        </div>
+                                        <div class="mx-2">
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="p-2">
+                                            <input type="text"id="minuto" class="form-control" disabled="disabled">
+                                        </div>
+                                        <div class="mx-2">
+                                            <h1>:</h1>
+                                        </div>
+                                        <div class="p-2">
+                                            <input type="text" id="segundo" class="form-control" disabled="disabled">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
